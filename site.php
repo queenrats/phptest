@@ -6,6 +6,11 @@
 
     <body>
         <?php echo '<p>Hello World!</p>'; ?>
+        <form name="form" action="" method="post">
+        <label for="id_field">Please enter User ID:</label>
+        <input type="text" id="id_field" name="id_field">
+    </form>
+
         <?php
     $servername = "localhost";
     $username = "phpuser";
@@ -18,15 +23,11 @@
         die("Connection failed: " . mysqli_connect_error());
     }
     echo "Connected successfully";
-    ?>
-    <form name="form" action="" method="post">
-        <label for="id_field">Please enter User ID:</label>
-        <input type="text" id="id_field" name="id_field">
-    </form>
+    
+    
+    $search = $_POST['id_field'];
 
-    <?php echo $_POST['id_field']; ?>
-
-    <!--- $sql = "SELECT * FROM Users";
+     $sql = "SELECT * FROM Users WHERE UserID = ". $search;
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
@@ -40,6 +41,6 @@
         
         
     mysqli_close($conn);    
-        ?> --->
+        ?>
     </body>
 </html>
