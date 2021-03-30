@@ -5,7 +5,7 @@
 
 
     <body>
-        <?php> echo '<p>Hello World!</p>'; ?>
+        <?php echo '<p>Hello World!</p>'; ?>
         <?php
     $servername = "localhost";
     $username = "phpuser";
@@ -18,8 +18,15 @@
         die("Connection failed: " . mysqli_connect_error());
     }
     echo "Connected successfully";
-    
-    $sql = "SELECT * FROM Users";
+    ?>
+    <form name="form" action="" method="post">
+        <label for="id_field">Please enter User ID:</label>
+        <input type="text" id="id_field" name="id_field">
+    </form>
+
+    <?php echo $_POST['id_field']; ?>
+
+    <!--- $sql = "SELECT * FROM Users";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
@@ -33,6 +40,6 @@
         
         
     mysqli_close($conn);    
-        ?>
+        ?> --->
     </body>
 </html>
