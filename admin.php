@@ -17,8 +17,10 @@
     <?php
         $user = $_POST['userfield'];
         $pass = $_POST['passfield'];
-        echo $user. "<br>";
-        echo $pass;
+        if (($user == "Admin") and ($pass = "hunter2_451")){
+            echo "<br>KEY{placeholder}";
+        }
+            
     ?>
 </body>
 </html>
