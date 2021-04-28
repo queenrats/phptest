@@ -23,6 +23,7 @@
         <form name="form" action="" method="post">
             <label for="enter">HTML Test Box</label>
             <textarea id="enter" name="enter" rows="4" cols="50"></textarea>
+            <input type="submit" value="Submit">
         </form>
         <?php
             $exp = "/<script>(window.)*alert\(.+\)<\/script>/";
