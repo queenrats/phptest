@@ -18,7 +18,7 @@
         $user = $_POST['userfield'];
         $pass = $_POST['passfield'];
         if (($user == "Admin") and ($pass = "hunter2_451")){
-            echo "<br>KEY{placeholder}";
+            echo "<br>KEY{dGhpc2lzd2h5eW91aGFzaHRoaW5ncw==}";
         }
             
     ?>

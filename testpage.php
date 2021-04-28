@@ -29,7 +29,7 @@
             $text = $_POST['enter'];
             echo "<br><br><br><br>";
             if (preg_match($exp, $text)){
-                echo "<script>window.alert('KEY{placeholder}')</script>";
+                echo "<script>window.alert('KEY{c2NyaXB0ZWRjcm9zc3NpdGU=}')</script>";
             }
             echo $text;
         ?>
