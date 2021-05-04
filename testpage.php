@@ -26,7 +26,7 @@
             <input type="submit" value="Submit">
         </form>
         <?php
-            $exp = "/<script>(window.)*alert\(.+\)<\/script>/";
+            $exp = '/<script>(window.)*alert\("?.*"?\)<\/script>/';
             $text = $_POST['enter'];
             echo "<br><br><br><br>";
             if (preg_match($exp, $text)){
